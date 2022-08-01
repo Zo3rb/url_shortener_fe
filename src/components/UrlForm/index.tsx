@@ -7,7 +7,7 @@ export default function UrlForm() {
 
   const onFinish = async (values: any) => {
     try {
-      const res = await axios.post(process.env.REACT_APP_BACKEND_URL!, {
+      const res = await axios.post("https://mern-url-be.herokuapp.com/api/shortener", {
         destination: values.destination,
       });
       setShortLink(
